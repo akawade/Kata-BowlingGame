@@ -33,35 +33,35 @@ class BN_BowlingGameTests: XCTestCase {
 //    {
 //        game.roll(pins:0)
 //        game.roll(pins:1)
-//        
+//
 //        game.roll(pins:5)
 //        game.roll(pins:3)
-//        
+//
 //        game.roll(pins:2)
 //        game.roll(pins:3)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:0)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:0)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:0)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:0)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:0)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:0)
-//        
+//
 //        game.roll(pins:0)
 //        game.roll(pins:5)
-//    
-//    
+//
+//
 //        let score = game.score()
 //        XCTAssertEqual(score, 19)
 //    }
@@ -73,6 +73,16 @@ class BN_BowlingGameTests: XCTestCase {
         }
         let score = game.score()
         XCTAssertEqual(score, 40)
+    }
+    
+    func testGame_RollHitNineAndZeroPins()
+    {
+        for _ in 1...10 {
+            game.roll(pins:9)
+            game.roll(pins:0)
+        }
+        let score = game.score()
+        XCTAssertEqual(score, 90)
     }
     
     func testExample() throws {
