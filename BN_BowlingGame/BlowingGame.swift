@@ -20,15 +20,19 @@ class BlowingGame {
     
     func score() -> Int {
         
-        for i in stride(from: 0, to: rolls.count-1, by: 2) {
-            print(i)
-       
-            if isFrameSpare(rollIndex: i) {
-                  // its is spare frame
-                    spareBonus += rolls[i + 2]
-            }
-            frameScore = rolls[i] + rolls[i + 1]
+        //for i in stride(from: 0, to: rolls.count-1, by: 2) {
+        var roll = 0
+        for _ in 1...10 {
+                //print(i)
+            frameScore = rolls[roll] + rolls[roll + 1]
             print("frameScore  == \(frameScore)")
+            if isFrameSpare(rollIndex: roll) {
+                  // its is spare frame
+                spareBonus += rolls[roll + 2]
+                roll += 2
+            }else {
+                roll += 2
+            }
             scoreCount +=  frameScore
             print("scoreCount  == \(scoreCount)")
 

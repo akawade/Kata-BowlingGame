@@ -67,6 +67,7 @@
             XCTAssertEqual(game.score(), 40)
         }
         
+        // 10 pairs of 9 and miss
         func testGame_RollHitNineAndZeroPins()
         {
             for _ in 1...10 {
@@ -135,6 +136,19 @@
            
             XCTAssertEqual(game.score(), 150)
         }
+        
+//        func testGame_AllStrikeRollsHitPins()
+//        {
+////            game.roll(pins:0)
+////            game.roll(pins:0)
+//            for _ in 1...12 {
+//                game.roll(pins:10)
+//            }
+////            game.roll(pins:10)
+////            game.roll(pins:10)
+//            //game.roll(pins:10)
+//            XCTAssertEqual(game.score(), 300)
+//        }
         private func roll(num: Int){
             
             for _ in 1...20 {
