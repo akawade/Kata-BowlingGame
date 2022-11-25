@@ -29,6 +29,44 @@ class BN_BowlingGameTests: XCTestCase {
         XCTAssertEqual(score, 0)
     }
     
+    func testGame_SomeRollPinsHit()
+    {
+        let sut = BlowingGame()
+        sut.roll(pins:0)
+        sut.roll(pins:1)
+        
+        sut.roll(pins:5)
+        sut.roll(pins:3)
+        
+        sut.roll(pins:2)
+        sut.roll(pins:3)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:0)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:0)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:0)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:0)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:0)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:0)
+        
+        sut.roll(pins:0)
+        sut.roll(pins:5)
+    
+    
+        let score = sut.score()
+        XCTAssertEqual(score, 19)
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
