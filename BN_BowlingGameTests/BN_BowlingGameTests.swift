@@ -18,6 +18,17 @@ class BN_BowlingGameTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
+    func testGame_AllRollZeroPins()
+    {
+        let sut = BlowingGame()
+        for i in 1...20 {
+        sut.roll(pins:0)
+        }
+        
+        let score = sut.score()
+        XCTAssertEqual(score, 0)
+    }
+    
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
