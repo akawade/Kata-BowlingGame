@@ -19,15 +19,13 @@ class BlowingGame {
     }
     
     func score() -> Int {
-        //for i in 0...rolls.count-1 {
+        
         for i in stride(from: 0, to: rolls.count-1, by: 2) {
             print(i)
        
-            if rolls.count >= 2 {
-                if rolls[i] + rolls[i + 1]  == 10 {
+            if isFrameSpare(rollIndex: i) {
                   // its is spare frame
                     spareBonus += rolls[i + 2]
-                }
             }
             frameScore = rolls[i] + rolls[i + 1]
             print("frameScore  == \(frameScore)")
@@ -36,8 +34,14 @@ class BlowingGame {
 
         }
         scoreCount += spareBonus
-        print("Total scoreCount  == \(scoreCount)")
+        print("Total score  == \(scoreCount)")
 
         return scoreCount
+    }
+    
+    private func isFrameSpare(rollIndex: Int) -> Bool {
+        if rolls.count >= 2 && rolls[rollIndex] + rolls[rollIndex + 1]  == 10 {
+            return true
+        } else {return false}
     }
 }
