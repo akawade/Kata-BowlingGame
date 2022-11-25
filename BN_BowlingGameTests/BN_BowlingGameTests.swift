@@ -121,6 +121,20 @@
             game.roll(pins:8)
             XCTAssertEqual(game.score(), 57)
         }
+        
+        //10 pairs of 5 and spare, with a final 5
+        func testGame_AllFiveRollsHitPins()
+        {
+            for _ in 1...9 {
+                game.roll(pins:5)
+                game.roll(pins:5)
+            }
+            game.roll(pins:5)
+            game.roll(pins:5) //15
+            game.roll(pins:5)
+           
+            XCTAssertEqual(game.score(), 150)
+        }
         private func roll(num: Int){
             
             for _ in 1...20 {
