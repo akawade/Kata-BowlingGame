@@ -92,6 +92,35 @@
             XCTAssertEqual(game.score(), 22)
         }
         
+        func testGame_LastFrameSpareHitPins()
+        {
+            for _ in 1...3 {
+                game.roll(pins:0)
+                game.roll(pins:0)
+            }
+            game.roll(pins:1)
+            game.roll(pins:2) //3
+            
+            game.roll(pins:3)
+            game.roll(pins:4)//7
+            
+            game.roll(pins:1)
+            game.roll(pins:2)//3
+            
+            game.roll(pins:3)
+            game.roll(pins:4)//7
+            
+            game.roll(pins:3)
+            game.roll(pins:4)//7
+            
+            game.roll(pins:6)
+            game.roll(pins:4) //12
+            
+            game.roll(pins:2)
+            game.roll(pins:8) //18
+            game.roll(pins:8)
+            XCTAssertEqual(game.score(), 57)
+        }
         private func roll(num: Int){
             
             for _ in 1...20 {
