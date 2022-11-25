@@ -15,6 +15,7 @@
 		E13AE18B293082F600AB3314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E13AE189293082F600AB3314 /* LaunchScreen.storyboard */; };
 		E13AE196293082F600AB3314 /* BN_BowlingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AE195293082F600AB3314 /* BN_BowlingGameTests.swift */; };
 		E13AE1A1293082F600AB3314 /* BN_BowlingGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13AE1A0293082F600AB3314 /* BN_BowlingGameUITests.swift */; };
+		E13F59CF2930EF9D00B7A87F /* BlowingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13F59CE2930EF9D00B7A87F /* BlowingGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E13AE19C293082F600AB3314 /* BN_BowlingGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BN_BowlingGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E13AE1A0293082F600AB3314 /* BN_BowlingGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BN_BowlingGameUITests.swift; sourceTree = "<group>"; };
 		E13AE1A2293082F600AB3314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E13F59CE2930EF9D00B7A87F /* BlowingGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlowingGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		E13AE17D293082EB00AB3314 /* BN_BowlingGame */ = {
 			isa = PBXGroup;
 			children = (
+				E13F59CE2930EF9D00B7A87F /* BlowingGame.swift */,
 				E13AE17E293082EB00AB3314 /* AppDelegate.swift */,
 				E13AE180293082EB00AB3314 /* SceneDelegate.swift */,
 				E13AE182293082EB00AB3314 /* ViewController.swift */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13F59CF2930EF9D00B7A87F /* BlowingGame.swift in Sources */,
 				E13AE183293082EB00AB3314 /* ViewController.swift in Sources */,
 				E13AE17F293082EB00AB3314 /* AppDelegate.swift in Sources */,
 				E13AE181293082EB00AB3314 /* SceneDelegate.swift in Sources */,
